@@ -12,25 +12,34 @@ function PrintDeveloperbyMap() {
   return developerNames;
 }
 
+
 function PrintDeveloperbyForEach() {
   arr=arr.filter(arr => arr.profession === "developer");
   let employee=[];
   arr.forEach(function(arr){
-      employee.push(arr.name);
+      employee.push(arr);
   })
   return employee;
 }
 
-function addData() {
-  let brr = { id: 4, name: "Rohit", age: 22, profession: "Student" };
-  arr.push(brr);
-  return arr;
-}
 
-function removeAdmin() {
-  arr=arr.filter(arr=>arr.profession !== "admin");
+function addData() {
+    let brr = { id: 4, name: "Rohit", age: "22", profession: "Student" };
+    arr.push(brr);
     return arr;
 }
+
+
+function removeAdmin() {
+    let employee=[];
+    arr.forEach(function(arr){
+      if(arr.profession !== "admin"){
+        employee.push(arr);
+      }
+    })
+    return employee;
+}
+
 
 function concatenateArray() {
   let newArr=[
